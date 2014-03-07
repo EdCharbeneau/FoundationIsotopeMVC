@@ -1,0 +1,53 @@
+﻿@using Prototyping.Ipsum;
+<div class="ribbon-wrapper">
+    <div class="ribbon"><a href="https://github.com/EdCharbeneau">GitHub</a></div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <h1>Welcome to Foundation</h1>
+        <h2 class="subheader">rocking Isotope.js</h2>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="large-12 columns tiles">
+        @for (int i = 0; i < 20; i++)
+        {
+            <div class="panel">
+                <article>
+                    <header><a href="#">@Html.Ipsum().Words(2)</a></header>
+                    <div class="description">
+                        <p>
+                            @Html.Ipsum().p()
+                        </p>
+                    </div>
+                </article>
+            </div>
+        }
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/jquery.isotope.js"></script>
+    <script>
+        var $tiles = $('.tiles');
+        $tiles.isotope({
+            // options
+            itemSelector: '.tiles > div',
+            layoutMode: 'masonry'
+        });
+        //$('#filters a').click(function () {
+        //    var $this = $(this);
+        //    if ($this.hasClass("active")) {
+        //        return false;
+        //    }
+        //    var selector = $this.attr('data-filter');
+        //    $tiles.isotope({ filter: selector });
+        //    $this.parents("#filters").find(".active").removeClass("active");
+        //    $this.parent().addClass("active");
+        //    return false;
+        //});
+    </script>
+}

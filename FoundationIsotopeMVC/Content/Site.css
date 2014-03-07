@@ -1,0 +1,163 @@
+﻿#gitThisShiz
+{
+    top: 0px;
+    right: 0px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+     transform: rotate(45deg);
+     filter: progid:DXImageTransform.Microsoft.Matrix(M11='0.7071067811865476', M12='-0.7071067811865475', M21='0.7071067811865475', M22='0.7071067811865476', sizingMethod='auto expand');
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Isotope */
+/* -----------------------------------------
+       Tiles
+----------------------------------------- */
+
+.tiles .panel {
+    margin: 5px;
+    padding: 0;
+    width: 230px; /* roughly == (page width / desired # of columns) - margin * 2 */
+    background-color: #CCC;
+    color: #fff;
+}
+
+    .tiles .panel header {
+        padding: 12px;
+    }
+
+        .tiles .panel header a {
+            color: #000;
+            line-height: 1.4;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+    .tiles .panel .description {
+        padding: 0 15px;
+    }
+
+/* if animating use these */
+.isotope,
+.isotope .isotope-item {
+    /* change duration value to whatever you like */
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
+}
+
+    .isotope .isotope-item {
+        -webkit-transition-property: -webkit-transform, opacity;
+        -moz-transition-property: -moz-transform, opacity;
+        -ms-transition-property: -ms-transform, opacity;
+        -o-transition-property: -o-transform, opacity;
+        transition-property: transform, opacity;
+    }
+
+        /**** disabling Isotope CSS3 transitions ****/
+        .isotope.no-transition,
+        .isotope.no-transition .isotope-item,
+        .isotope .isotope-item.no-transition {
+            -webkit-transition-duration: 0s;
+            -moz-transition-duration: 0s;
+            -ms-transition-duration: 0s;
+            -o-transition-duration: 0s;
+            transition-duration: 0s;
+        }
+
+        /* git banner */
+
+.ribbon-wrapper {
+  width: 206px;
+  height: 206px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 5px;
+}
+
+.ribbon {
+  font: 18px Sans-Serif;
+  color: #fff;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 10px 0;
+  left: -5px;
+  top: 42px;
+  width: 260px;
+  background-color: #FD631C;
+}
+
+.ribbon:before, .ribbon:after {
+  content: "";
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon:before {
+  left: 0;
+}
+.ribbon:after {
+  right: 0;
+}
+
+.ribbon a{
+  text-decoration:none;
+  color: #fff;
+}
