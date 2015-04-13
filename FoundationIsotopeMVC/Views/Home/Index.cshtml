@@ -9,13 +9,48 @@
         <h2 class="subheader">rocking Isotope.js</h2>
     </div>
 </div>
-
+<div class="row">
+    <div class="large-12 columns">
+        <dl id="filters" class="sub-nav">
+            <dd class="active"><a href="#" data-filter="*">show all</a></dd>
+            <dd><a href="#" data-filter=".alpha" class="alpha">alpha</a></dd>
+            <dd><a href="#" data-filter=".beta" class="beta">beta</a></dd>
+            <dd><a href="#" data-filter=".gamma" class="gamma">gamma</a></dd>
+        </dl>
+    </div>
+</div>
 <div class="row">
 
     <div class="large-12 columns tiles">
-        @for (int i = 0; i < 20; i++)
+        @for (int i = 0; i < 5; i++)
         {
-            <div class="panel">
+            <div class="panel alpha">
+                <article>
+                    <header><a href="#">@Html.Ipsum().Words(2)</a></header>
+                    <div class="description">
+                        <p>
+                            @Html.Ipsum().p()
+                        </p>
+                    </div>
+                </article>
+            </div>
+        }
+        @for (int i = 0; i < 5; i++)
+        {
+            <div class="panel beta">
+                <article>
+                    <header><a href="#">@Html.Ipsum().Words(2)</a></header>
+                    <div class="description">
+                        <p>
+                            @Html.Ipsum().p()
+                        </p>
+                    </div>
+                </article>
+            </div>
+        }
+        @for (int i = 0; i < 5; i++)
+        {
+            <div class="panel gamma">
                 <article>
                     <header><a href="#">@Html.Ipsum().Words(2)</a></header>
                     <div class="description">
@@ -38,16 +73,16 @@
             itemSelector: '.tiles > div',
             layoutMode: 'masonry'
         });
-        //$('#filters a').click(function () {
-        //    var $this = $(this);
-        //    if ($this.hasClass("active")) {
-        //        return false;
-        //    }
-        //    var selector = $this.attr('data-filter');
-        //    $tiles.isotope({ filter: selector });
-        //    $this.parents("#filters").find(".active").removeClass("active");
-        //    $this.parent().addClass("active");
-        //    return false;
-        //});
+        $('#filters a').click(function () {
+            var $this = $(this);
+            if ($this.hasClass("active")) {
+                return false;
+            }
+            var selector = $this.attr('data-filter');
+            $tiles.isotope({ filter: selector });
+            $this.parents("#filters").find(".active").removeClass("active");
+            $this.parent().addClass("active");
+            return false;
+        });
     </script>
 }
